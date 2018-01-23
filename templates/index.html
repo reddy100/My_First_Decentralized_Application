@@ -16,20 +16,6 @@
 
   <h1>A Simple Hello World Voting Application</h1>
 
-
-
-  {% if alert %}
-
-  <div class="alert alert-warning">
-
-    {{ alert }}
-
-  </div>
-
-  {% endif %}
-
-
-
   <div class="table-responsive">
 
     <table class="table table-bordered">
@@ -48,17 +34,29 @@
 
       <tbody>
 
-        {% for candidate, votes in candidates.items() %}
-
         <tr>
 
-          <td>{{ candidate }}</td>
+          <td>Rama</td>
 
-          <td>{{ votes }}</td>
+          <td id="candidate-1"></td>
 
         </tr>
 
-        {% endfor %}
+        <tr>
+
+          <td>Nick</td>
+
+          <td id="candidate-2"></td>
+
+        </tr>
+
+        <tr>
+
+          <td>Jose</td>
+
+          <td id="candidate-3"></td>
+
+        </tr>
 
       </tbody>
 
@@ -66,14 +64,16 @@
 
   </div>
 
-  <form action="" method="post">
+  <input type="text" id="candidate" />
 
-    <input type="text" name="candidate" />
-
-    <input type="submit" value="Vote" class="btn btn-primary"/>
-
-  </form>
+  <a href="#" onclick="voteForCandidate()" class="btn btn-primary">Vote</a>
 
 </body>
+
+<script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+
+<script src="./index.js"></script>
 
 </html>
